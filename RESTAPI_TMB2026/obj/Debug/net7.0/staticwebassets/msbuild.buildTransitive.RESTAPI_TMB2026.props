@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\RESTAPI_TMB2026.props" />
+</Project>
