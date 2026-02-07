@@ -1,0 +1,6 @@
+@RES_API_TMB_2026_HostAddress = http://localhost:5062
+
+GET {{RES_API_TMB_2026_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

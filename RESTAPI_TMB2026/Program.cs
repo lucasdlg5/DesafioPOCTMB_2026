@@ -17,10 +17,5 @@ if (app.Environment.IsDevelopment())
 
 
 app.OrdersRoutes();
-
 app.UseHttpsRedirection();
-
-
-
-
 app.Run();

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RESTAPI_TMB2026")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+132aa81d86c9af6d8bc97a944d25b0578c0b02c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("RESTAPI_TMB2026")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RESTAPI_TMB2026")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

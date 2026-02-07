@@ -1,0 +1,20 @@
+[
+  {
+    "ContainingType": "RESTAPI_TMB2026.Orders\u002B\u003C\u003Ec",
+    "Method": "\u003COrdersRoutes\u003Eb__0_0",
+    "RelativePath": "order",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "RESTAPI_TMB2026.Models.OrderModel",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
