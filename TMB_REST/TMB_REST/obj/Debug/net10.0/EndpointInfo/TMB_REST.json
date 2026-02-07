@@ -13,7 +13,7 @@
     }
   ],
   "paths": {
-    "/orders": {
+    "/test": {
       "get": {
         "tags": [
           "TMB_REST"
@@ -32,7 +32,7 @@
         }
       }
     },
-    "/order": {
+    "/orders": {
       "get": {
         "tags": [
           "TMB_REST"
@@ -43,10 +43,60 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrderModel"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OrderModel"
+                  }
                 }
               }
             }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TMB_REST"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderModel"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/orders/{id}": {
+      "get": {
+        "tags": [
+          "TMB_REST"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -95,13 +145,20 @@
     "schemas": {
       "OrderModel": {
         "required": [
-          "cliente"
+          "id",
+          "cliente",
+          "produto",
+          "data_Criacao"
         ],
         "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            "format": "uuid"
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
           },
           "cliente": {
             "type": [
@@ -116,16 +173,22 @@
             ]
           },
           "valor": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?(?:[eE][+-]?\\d+)?$",
             "type": [
               "null",
+              "number",
               "string"
-            ]
+            ],
+            "format": "double"
           },
           "status": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [
               "null",
+              "integer",
               "string"
-            ]
+            ],
+            "format": "int32"
           },
           "data_Criacao": {
             "type": [

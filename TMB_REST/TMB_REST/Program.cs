@@ -17,7 +17,7 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
-app.MapGet("/orders", () => "Hello World!");
+app.MapGet("/test", () => "Hello World!");
 
 app.OrdersRoutes();
 app.UseHttpsRedirection();
