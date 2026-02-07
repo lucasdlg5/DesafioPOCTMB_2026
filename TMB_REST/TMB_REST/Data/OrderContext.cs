@@ -11,7 +11,7 @@ namespace TMB_REST.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=orders.db");
+            optionsBuilder.UseSqlite("Data Source=order.sqlite");
             base.OnConfiguring(optionsBuilder);
         }
     }
