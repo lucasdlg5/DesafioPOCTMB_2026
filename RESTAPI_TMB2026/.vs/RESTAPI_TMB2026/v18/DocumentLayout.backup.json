@@ -3,7 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\RESTAPI_TMB2026\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54C40010-389C-4D40-AC61-F9E38BCB4C7D}|..\\RES_API_TMB_2026\\RES_API_TMB_2026.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\res_api_tmb_2026\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0269C9AE-FC37-48DF-8D8A-0A3AA4C2CB06}|RESTAPI_TMB2026.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\restapi_tmb2026\\data\\ordercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0269C9AE-FC37-48DF-8D8A-0A3AA4C2CB06}|RESTAPI_TMB2026.csproj|solutionrelative:data\\ordercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0269C9AE-FC37-48DF-8D8A-0A3AA4C2CB06}|RESTAPI_TMB2026.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\restapi_tmb2026\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderContext.cs",
+              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\RESTAPI_TMB2026\\Data\\OrderContext.cs",
+              "RelativeDocumentMoniker": "Data\\OrderContext.cs",
+              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\RESTAPI_TMB2026\\Data\\OrderContext.cs",
+              "RelativeToolTip": "Data\\OrderContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T16:00:51.828Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -27,23 +41,9 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\RESTAPI_TMB2026\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T15:52:15.734Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\RES_API_TMB_2026\\Program.cs",
-              "RelativeDocumentMoniker": "..\\RES_API_TMB_2026\\Program.cs",
-              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\RES_API_TMB_2026\\Program.cs",
-              "RelativeToolTip": "..\\RES_API_TMB_2026\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T15:52:00.544Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-07T15:52:15.734Z"
             }
           ]
         }
