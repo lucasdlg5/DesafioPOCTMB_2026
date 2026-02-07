@@ -1,18 +1,20 @@
 # DesafioPOCTMB_2026
 Desenvolver um sistema simples de gestão de pedidos, onde será possível criar, listar e visualizar pedidos. Sempre que um pedido for criado, o sistema deve enviar uma mensagem para o Azure Service Bus, simulando um processamento assíncrono. Um worker será responsável por consumir as mensagens, processar o pedido e atualizar seu status.
 
-🎯 Objetivo do Desafio
+## 🎯 Objetivo do Desafio
 Desenvolver um sistema simples de gestão de pedidos, onde será possível criar, listar e
 visualizar pedidos. Sempre que um pedido for criado, o sistema deve enviar uma mensagem
 para o Azure Service Bus, simulando um processamento assíncrono. Um worker será
 responsável por consumir as mensagens, processar o pedido e atualizar seu status.
-🎯 Tecnologias Obrigatórias
+## 🎯 Tecnologias Obrigatórias
 - Backend: C# (.NET 7 ou superior) + Entity Framework + PostgreSQL
 - Frontend: React + TailwindCSS
 - Mensageria: Azure Service Bus
 - Infraestrutura: Docker / Docker Compose (preferencial)
-🎯 Requisitos do Sistema
-1️⃣🎯 Backend (API em C#)
+
+# 🎯 Requisitos do Sistema
+
+## 1️⃣🎯 Backend (API em C#)
 Criar uma API REST com os seguintes endpoints:
 • POST /orders → Cria um novo pedido
 • GET /orders → Lista todos os pedidos
@@ -29,18 +31,21 @@ Regras adicionais:
 - Consumidor do Service Bus deve ser idempotente.
 - Incluir CorrelationId=OrderId e EventType=OrderCreated.
 - Implementar health checks para API, banco e fila.
-2️⃣🎯 Frontend (React + TailwindCSS)
+
+## 2️⃣🎯 Frontend (React + TailwindCSS)
 Criar uma interface para:
 - Listar pedidos em tabela responsiva.
 - Criar novos pedidos via formulário.
 - Visualizar detalhes do pedido.
 - Exibir feedback visual para mudanças de status.
-3️⃣🎯 Infraestrutura
+
+## 3️⃣🎯 Infraestrutura
 - Criar Docker Compose com API, Worker, Frontend, PostgreSQL e PgAdmin.
 - Usar .env para variáveis sensíveis.
 - Configurar migrations automáticas.
 - Implementar healthchecks no Compose.
-4️⃣🎯 Módulo Opcional – Pergunte sobre os Pedidos (IA/Analytics) 🎯
+
+## 4️⃣🎯 Módulo Opcional – Pergunte sobre os Pedidos (IA/Analytics) 🎯
 Este módulo é opcional, mas vale pontos extras.
 Permite que os usuários façam perguntas em linguagem natural sobre os pedidos, usando uma
 LLM (OpenAI, Azure OpenAI, Gemini, etc.).
@@ -51,7 +56,8 @@ Exemplos de perguntas:
 - Qual o tempo médio para aprovar os pedidos?
 - Quantos pedidos estão pendentes?
 - Qual o valor total de pedidos finalizados este mês?
-5️⃣🎯 Diferenciais Técnicos (Bônus)
+
+## 5️⃣🎯 Diferenciais Técnicos (Bônus)
 - Outbox Pattern (mensageria transacional) [+3]
 - Histórico de status do pedido [+3]
 - SignalR/WebSockets com fallback [+3]
@@ -59,14 +65,16 @@ Exemplos de perguntas:
 - Tracing ponta-a-ponta [+2]
 - Golden Tests [+2]
 - Módulo IA/Analytics com LLM [+5]
-🎯 Critérios de Avaliação
+
+# 🎯 Critérios de Avaliação
 - Qualidade do Código: 30%
 - Mensageria & Confiabilidade: 20%
 - Funcionalidade: 15%
 - Documentação & DX: 15%
 - Frontend & UX: 10%
 - Testes Automatizados: 10%
-🎯 Entrega
+
+# 🎯 Entrega
 O candidato deve fornecer um repositório GitHub:
 - Código-fonte completo
 - README.md com instruções claras para rodar o projeto
