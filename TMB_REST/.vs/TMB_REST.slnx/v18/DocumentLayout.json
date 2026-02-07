@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "TMB_REST\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Properties\\launchSettings.json",
+              "RelativeToolTip": "TMB_REST\\Properties\\launchSettings.json",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-07T19:19:20.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Program.cs",
+              "RelativeDocumentMoniker": "TMB_REST\\Program.cs",
+              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Program.cs",
+              "RelativeToolTip": "TMB_REST\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:08:30.807Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
