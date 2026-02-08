@@ -49,7 +49,7 @@ export function OrderList({ orders, onUpdateStatus }: OrderListProps) {
       <h2 className="text-xl sm:text-2xl mb-4">Todos os Pedidos</h2>
       
       {orders.map((order) => {
-        const StatusIcon = statusConfig[order.status].icon;
+        const StatusIcon = Clock;
         
         return (
           <div
@@ -61,30 +61,30 @@ export function OrderList({ orders, onUpdateStatus }: OrderListProps) {
                 <div className="flex items-start gap-3 mb-2">
                   <div className="flex-1">
                     <p className="font-mono text-sm text-gray-500">{order.id}</p>
-                    <p className="mt-1 truncate">{order.customerName}</p>
+                    <p className="mt-1 truncate">{order.cliente}</p>
                   </div>
                   <div
                     className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-sm whitespace-nowrap ${
-                      statusConfig[order.status].color
+                      Clock
                     }`}
                   >
                     <StatusIcon className="w-4 h-4" />
-                    <span className="hidden sm:inline">{statusConfig[order.status].label}</span>
+                    {/* <span className="hidden sm:inline">{statusConfig[order.status].label}</span> */}
                   </div>
                 </div>
                 
                 <div className="text-sm text-gray-600 space-y-1">
                   <p className="truncate">
-                    <span className="text-gray-500">Produto:</span> {order.product}
+                    <span className="text-gray-500">Produto:</span> {order.produto}
                   </p>
                   <p>
-                    <span className="text-gray-500">Quantidade:</span> {order.quantity}
+                    <span className="text-gray-500">Quantidade:</span> {order.valor}
                   </p>
                   <p>
-                    <span className="text-gray-500">Total:</span> R$ {order.total.toFixed(2)}
+                    <span className="text-gray-500">Total:</span> R$ {order.valor.toFixed(2)}
                   </p>
                   <p className="text-xs text-gray-400">
-                    {order.createdAt.toLocaleDateString('pt-BR')}
+                    {/* {order.createdAt.toLocaleDateString('pt-BR')} */}
                   </p>
                 </div>
               </div>

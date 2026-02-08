@@ -35,63 +35,64 @@ import React, { useEffect } from 'react';
 
 export interface Order {
   id: string;
-  customerName: string;
-  product: string;
-  quantity: number;
-  status: 'pending' | 'processing' | 'shipped' | 'delivered' | 'cancelled';
+  cliente: string;
+  produto: string;
+  valor: number;
   createdAt: Date;
-  total: number;
+  status: number;
+  // status: ['pending' , 'processing' , 'shipped' , 'delivered' , 'cancelled'];
+  // status: 'pending' | 'processing' | 'shipped' | 'delivered' | 'cancelled';
+  // quantity: number;
 }
 
-const FetchExample = () => {
+const statusStrings = ['pending', 'processing', 'shipped', 'delivered', 'cancelled'];
+
+function App() {
+
+  const [orders, setOrders] = useState<Order[]>([]);
+
   useEffect(() => {
     fetch('https://localhost:44392/orders')
       .then(response => response.json())
       .then(data => {
-        console.log(data);  
+        console.log(data);
+        setOrders(data);
       })
       .catch(error => {
         console.log('Error:', error);  
       });
-  }, []);  
+  }, []);
+  // const [orders, setOrders] = useState<Order[]>([
+  //   {
+  //     id: 'ORD-001',
+  //     customerName: 'João Silva',
+  //     product: 'Notebook Dell',
+  //     quantity: 1,
+  //     status: 'delivered',
+  //     createdAt: new Date('2026-02-01'),
+  //     total: 3500.00
+  //   },
+  //   {
+  //     id: 'ORD-002',
+  //     cliente: 'Maria Santos',
+  //     produto: 'Mouse Logitech',
+  //     quantity: 2,
+  //     status: 'shipped',
+  //     createdAt: new Date('2026-02-05'),
+  //     total: 180.00
+  //   },
+  //   {
+  //     id: 'ORD-003',
+  //     customerName: 'Carlos Oliveira',
+  //     product: 'Teclado Mecânico',
+  //     quantity: 1,
+  //     status: 'processing',
+  //     createdAt: new Date('2026-02-07'),
+  //     total: 450.00
+  //   },
+  // ]);
 
-  return <div>Check the console for the fetched data!</div>;
-};
-
-
-
-function App() {
-
-  FetchExample();
-  const [orders, setOrders] = useState<Order[]>([
-    {
-      id: 'ORD-001',
-      customerName: 'João Silva',
-      product: 'Notebook Dell',
-      quantity: 1,
-      status: 'delivered',
-      createdAt: new Date('2026-02-01'),
-      total: 3500.00
-    },
-    {
-      id: 'ORD-002',
-      customerName: 'Maria Santos',
-      product: 'Mouse Logitech',
-      quantity: 2,
-      status: 'shipped',
-      createdAt: new Date('2026-02-05'),
-      total: 180.00
-    },
-    {
-      id: 'ORD-003',
-      customerName: 'Carlos Oliveira',
-      product: 'Teclado Mecânico',
-      quantity: 1,
-      status: 'processing',
-      createdAt: new Date('2026-02-07'),
-      total: 450.00
-    },
-  ]);
+  
   
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -111,10 +112,10 @@ function App() {
   };
 
   const filteredOrders = orders.filter(order => 
-    order.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    order.customerName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    order.product.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    order.status.toLowerCase().includes(searchTerm.toLowerCase())
+    order.id ||
+    order.cliente.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    order.produto.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    statusStrings[order.status].includes(searchTerm.toLowerCase())
   );
 
   return (

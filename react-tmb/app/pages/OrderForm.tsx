@@ -7,25 +7,25 @@ interface OrderFormProps {
 }
 
 export function OrderForm({ onSubmit }: OrderFormProps) {
-  const [customerName, setCustomerName] = useState('');
-  const [product, setProduct] = useState('');
-  const [quantity, setQuantity] = useState(1);
+  const [cliente, setCustomerName] = useState('');
+  const [produto, setProduct] = useState('');
+  const [quantidade, setQuantity] = useState(1);
   const [total, setTotal] = useState(0);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!customerName || !product || quantity <= 0 || total <= 0) {
+    if (!cliente || !produto || quantidade <= 0 || total <= 0) {
       alert('Por favor, preencha todos os campos corretamente');
       return;
     }
 
     onSubmit({
-      customerName,
-      product,
-      quantity,
+      cliente: cliente,
+      produto: produto,
+      quantidade: quantidade,
       total,
-      status: 'pending',
+      status: 0,
     });
 
     // Reset form
@@ -47,7 +47,7 @@ export function OrderForm({ onSubmit }: OrderFormProps) {
           <input
             type="text"
             id="customerName"
-            value={customerName}
+            value={cliente}
             onChange={(e) => setCustomerName(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Digite o nome do cliente"
@@ -62,7 +62,7 @@ export function OrderForm({ onSubmit }: OrderFormProps) {
           <input
             type="text"
             id="product"
-            value={product}
+            value={produto}
             onChange={(e) => setProduct(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Digite o nome do produto"
@@ -78,7 +78,7 @@ export function OrderForm({ onSubmit }: OrderFormProps) {
             type="number"
             id="quantity"
             min="1"
-            value={quantity}
+            value={quantidade}
             onChange={(e) => setQuantity(parseInt(e.target.value))}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
