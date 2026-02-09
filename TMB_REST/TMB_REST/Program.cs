@@ -27,6 +27,10 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<OrderContext>();
 
+var connectionString = builder.Configuration.GetConnectionString("OrderContext");
+
+builder.Services.AddDbContext<OrderContext>(options => options.UseNpgsql(connectionString));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
