@@ -80,3 +80,143 @@ O candidato deve fornecer um repositório GitHub:
 - README.md com instruções claras para rodar o projeto
 - Exemplo de .env
 - Diagramas simples de arquitetura (diferencial)
+
+
+
+------
+
+
+# TMB — Guia condensado de instalação e execução (do zero)
+
+Este arquivo único descreve como clonar o repositório, instalar dependências (.NET 10 e React), executar a API REST, executar o frontend e validar endpoints (testes REST). Inclui também a correção imediata para o erro de materialização do EF Core.
+
+> Substitua `<REPO_URL>` pela URL do repositório remoto.
+
+---------------------
+## Pré-requisitos
+- Git
+- .NET SDK 10 (https://dotnet.microsoft.com/)
+- Node.js (LTS) + npm ou pnpm (https://nodejs.org/)
+- (Opcional) Docker / Docker Compose
+- Ferramenta HTTP: curl, httpie ou Postman
+
+---------------------
+## 1) Clonar repositório
+
+git clone <REPO_URL> cd <nome-do-repositorio>
+
+
+---------------------
+## 2) Backend (.NET 10 — `TMB_REST`)
+1. Entrar na pasta do backend:
+
+cd TMB_REST/TMB_REST
+
+
+2. Restaurar e compilar:
+
+dotnet restore dotnet build
+
+
+3. Configurar connection string
+- Ajuste `appsettings.json` / `appsettings.Development.json` conforme seu banco de dados.
+
+4. Migrations (se aplicável):
+
+dotnet tool install --global dotnet-ef   # se necessário dotnet ef database update
+
+criar migration (somente se precisar gerar esquema)
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+
+5. Executar API:
+
+dotnet run
+
+- Verifique `launchSettings.json` para as portas (ex.: `http://localhost:5000` e `https://localhost:5001`).
+
+---------------------
+## 3) Frontend (React / Next.js — `react-tmb`)
+1. Entrar na pasta do frontend:
+
+cd ../../react-tmb
+
+
+2. Instalar dependências:
+
+npm install
+
+Ou
+
+pnpm install
+
+
+3. Rodar em desenvolvimento:
+
+npm run dev
+
+ou
+
+pnpm dev
+
+- Frontend: geralmente `http://localhost:3000`.
+
+4. Build para produção:
+
+npm run build npm start
+
+
+---------------------
+## 4) Testes REST API (automatizados e manuais)
+
+Opção A — Testes automatizados (.NET):
+- Se existirem testes no repositório:
+
+dotnet test
+
+
+Opção B — Testes manuais com curl (exemplos):
+- GET todos
+
+curl -s http://localhost:5000/api/OrderModels
+
+- GET index
+
+curl -s http://localhost:5000/api/OrderModels/index
+
+- GET detalhe
+
+curl -s http://localhost:5000/api/OrderModels/details/1
+
+- POST criar
+
+curl -X POST http://localhost:5000/api/OrderModels/create 
+-H "Content-Type: application/json" 
+-d '{ "Cliente":"Fulano", "Produto":"Produto X", "Valor":123.45, "Status":1, "Data_Criacao":"2026-02-01T12:00:00" }'
+
+- POST editar
+
+curl -X POST http://localhost:5000/api/OrderModels/edit/1 
+-H "Content-Type: application/json" 
+-d '{ "Id":1, "Cliente":"Fulano Atualizado", "Produto":"Produto X", "Valor":150.00, "Status":2, "Data_Criacao":"2026-02-01T12:00:00" }'
+
+- POST deletar
+
+curl -X POST http://localhost:5000/api/OrderModels/delete/1
+
+
+Use Postman/Insomnia para testes interativos.
+
+---------------------
+## 5) Docker (opcional)
+- Backend:
+
+docker build -t tmb_rest ./TMB_REST/TMB_REST docker run -p 5000:80 tmb_rest
+
+- Frontend:
+
+docker build -t tmb_front ./react-tmb docker run -p 3000:3000 tmb_front
+
+
+---------------------
