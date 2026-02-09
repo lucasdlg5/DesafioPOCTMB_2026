@@ -181,7 +181,6 @@ C:\Users\Asminn\Documents\GitHub\DesafioPOCTMB_2026\TMB_REST\TMB_REST\bin\Debug\
 C:\Users\Asminn\Documents\GitHub\DesafioPOCTMB_2026\TMB_REST\TMB_REST\bin\Debug\net10.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\Asminn\Documents\GitHub\DesafioPOCTMB_2026\TMB_REST\TMB_REST\bin\Debug\net10.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Asminn\Documents\GitHub\DesafioPOCTMB_2026\TMB_REST\TMB_REST\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
-C:\Users\Asminn\Documents\GitHub\DesafioPOCTMB_2026\TMB_REST\TMB_REST\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\Asminn\Documents\GitHub\DesafioPOCTMB_2026\TMB_REST\TMB_REST\bin\Debug\net10.0\System.Web.Cors.dll
 C:\Users\Asminn\Documents\GitHub\DesafioPOCTMB_2026\TMB_REST\TMB_REST\bin\Debug\net10.0\System.Net.Http.Formatting.dll
 C:\Users\Asminn\Documents\GitHub\DesafioPOCTMB_2026\TMB_REST\TMB_REST\bin\Debug\net10.0\System.Web.Http.dll
