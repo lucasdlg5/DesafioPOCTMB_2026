@@ -52,7 +52,7 @@ function App() {
   const [orders, setOrders] = useState<Order[]>([]);
 
   useEffect(() => {
-    fetch('https://localhost:44392/orders')
+    fetch('https://localhost:44392/api/orderModels')
       .then(response => response.json())
       .then(data => {
         console.log(data);
