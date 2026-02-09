@@ -10,6 +10,8 @@ using TMB_REST.Models;
 
 namespace TMB_REST.Controllers
 {
+    // Rota de API para expor endpoints REST: GET /api/OrderModels
+    [Route("api/[controller]")]
     public class OrderModelsController : Controller
     {
         private readonly OrderContext _context;
@@ -17,6 +19,13 @@ namespace TMB_REST.Controllers
         public OrderModelsController(OrderContext context)
         {
             _context = context;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetOrders()
+        {
+            var orders = await _context.OrderModel.ToListAsync();
+            return Ok(orders);
         }
 
         // GET: OrderModels

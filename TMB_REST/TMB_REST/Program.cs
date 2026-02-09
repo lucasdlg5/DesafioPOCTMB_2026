@@ -9,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<OrderContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("OrderContext") ?? throw new InvalidOperationException("Connection string 'OrderContext' not found.")));
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
@@ -23,6 +25,9 @@ builder.Services.AddCors(options =>
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<OrderContext>();
@@ -37,14 +42,16 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    //app.UseSwagger();
+    app.UseSwaggerUI(); 
 }
 
 
-app.MapGet("/test", () => "Hello World!");
+//app.MapGet("/test", () => "Hello World!");
 
-app.OrdersRoutes();
+//app.OrdersRoutes();
 app.UseHttpsRedirection();
-
+app.MapSwagger().RequireAuthorization();
 
 app.UseCors(MyAllowSpecificOrigins);
 
@@ -52,5 +59,3 @@ app.UseAuthorization();
 
 app.MapControllers();
 app.Run();
-
-
