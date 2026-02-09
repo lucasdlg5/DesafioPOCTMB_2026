@@ -12,9 +12,9 @@ namespace TMB_REST.Controllers
 {
     public class OrderModelsController : Controller
     {
-        private readonly TMB_RESTContext _context;
+        private readonly OrderContext _context;
 
-        public OrderModelsController(TMB_RESTContext context)
+        public OrderModelsController(OrderContext context)
         {
             _context = context;
         }

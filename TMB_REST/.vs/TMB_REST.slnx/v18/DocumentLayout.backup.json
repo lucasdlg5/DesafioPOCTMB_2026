@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\controllers\\ordermodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\data\\ordercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\data\\ordercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\data\\ordercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\data\\ordercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -40,14 +40,14 @@
               "RelativeDocumentMoniker": "TMB_REST\\Controllers\\OrderModelsController.cs",
               "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Controllers\\OrderModelsController.cs",
               "RelativeToolTip": "TMB_REST\\Controllers\\OrderModelsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAAwEwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-09T18:41:53.902Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "OrderContext.cs",
               "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Data\\OrderContext.cs",
               "RelativeDocumentMoniker": "TMB_REST\\Data\\OrderContext.cs",
@@ -60,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "OrderModel.cs",
               "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Models\\OrderModel.cs",
               "RelativeDocumentMoniker": "TMB_REST\\Models\\OrderModel.cs",
@@ -86,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Orders.cs",
               "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Orders.cs",
               "RelativeDocumentMoniker": "TMB_REST\\Orders.cs",

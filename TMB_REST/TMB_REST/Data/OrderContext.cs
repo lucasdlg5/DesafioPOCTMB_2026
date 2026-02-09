@@ -1,27 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using TMB_REST.Models;
 
 namespace TMB_REST.Data
 {
     public class OrderContext : DbContext
-
     {
-        
-        public DbSet<OrderModel> Orders { get; set; }
-
-
-        public OrderContext(DbContextOptions dbContextOptions) : base(dbContextOptions) 
-        { 
-        
-        }
-
-        public DbSet<OrderModel> DBOrder {  get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public OrderContext (DbContextOptions<OrderContext> options)
+            : base(options)
         {
-            optionsBuilder.UseSqlite("Data Source=order.db");
-            base.OnConfiguring(optionsBuilder);
         }
+
+        public DbSet<TMB_REST.Models.OrderModel> OrderModel { get; set; } = default!;
     }
 }

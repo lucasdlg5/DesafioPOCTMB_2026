@@ -6,8 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<TMB_RESTContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("TMB_RESTContext") ?? throw new InvalidOperationException("Connection string 'TMB_RESTContext' not found.")));
+builder.Services.AddDbContext<OrderContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("OrderContext") ?? throw new InvalidOperationException("Connection string 'OrderContext' not found.")));
 
 
 builder.Services.AddCors(options =>
