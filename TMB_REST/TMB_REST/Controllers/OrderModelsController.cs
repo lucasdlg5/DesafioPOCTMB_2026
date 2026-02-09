@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TMB_REST.Data;
 using TMB_REST.Models;
 
 namespace TMB_REST.Controllers
 {
-    // Rota de API para expor endpoints REST: GET /api/OrderModels
+    [ApiController]
     [Route("api/[controller]")]
+    [EnableCors("_myAllowSpecificOrigins")]
     public class OrderModelsController : Controller
     {
         private readonly OrderContext _context;
@@ -21,6 +22,7 @@ namespace TMB_REST.Controllers
             _context = context;
         }
 
+        // GET: api/OrderModels
         [HttpGet]
         public async Task<IActionResult> GetOrders()
         {
@@ -28,134 +30,111 @@ namespace TMB_REST.Controllers
             return Ok(orders);
         }
 
-        // GET: OrderModels
+        // GET: api/OrderModels/index
+        [HttpGet("index")]
         public async Task<IActionResult> Index()
         {
-            return View(await _context.OrderModel.ToListAsync());
+            return Ok(await _context.OrderModel.ToListAsync());
         }
 
-        // GET: OrderModels/Details/5
+        // GET: api/OrderModels/details/5
+        [HttpGet("details/{id:int}")]
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
             var orderModel = await _context.OrderModel
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (orderModel == null)
-            {
-                return NotFound();
-            }
+            if (orderModel == null) return NotFound();
 
-            return View(orderModel);
+            return Ok(orderModel);
         }
 
-        // GET: OrderModels/Create
+        // GET: api/OrderModels/create
+        [HttpGet("create")]
         public IActionResult Create()
         {
-            return View();
+            return Ok();
         }
 
-        // POST: OrderModels/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Cliente,Produto,Valor,Status,Data_Criacao")] OrderModel orderModel)
+        // POST: api/OrderModels/create
+        [HttpPost("create")]
+        public async Task<IActionResult> Create([FromBody] OrderModel dto)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(orderModel);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(orderModel);
+            if (dto == null) return BadRequest();
+
+            var order = new OrderModel(0, dto.Cliente, dto.Produto, dto.Valor, dto.Status, dto.Data_Criacao);
+            _context.OrderModel.Add(order);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(Details), new { id = order.Id }, order);
         }
 
-        // GET: OrderModels/Edit/5
+        // GET: api/OrderModels/edit/5
+        [HttpGet("edit/{id:int}")]
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
             var orderModel = await _context.OrderModel.FindAsync(id);
-            if (orderModel == null)
-            {
-                return NotFound();
-            }
-            return View(orderModel);
+            if (orderModel == null) return NotFound();
+            return Ok(orderModel);
         }
 
-        // POST: OrderModels/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Cliente,Produto,Valor,Status,Data_Criacao")] OrderModel orderModel)
+        // POST: api/OrderModels/edit/5
+        [HttpPost("edit/{id:int}")]
+        public async Task<IActionResult> Edit(int id, [FromBody] OrderModel dto)
         {
-            if (id != orderModel.Id)
+            if (dto == null) return BadRequest();
+
+            var orderModel = await _context.OrderModel.FindAsync(id);
+            if (orderModel == null) return NotFound();
+
+            // Atualiza propriedades
+            orderModel.Cliente = dto.Cliente;
+            orderModel.Produto = dto.Produto;
+            orderModel.Valor = dto.Valor;
+            orderModel.Status = dto.Status;
+            orderModel.Data_Criacao = dto.Data_Criacao;
+
+            try
             {
-                return NotFound();
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!OrderModelExists(orderModel.Id)) return NotFound();
+                throw;
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(orderModel);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!OrderModelExists(orderModel.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(orderModel);
+            return NoContent();
         }
 
-        // GET: OrderModels/Delete/5
+        // GET: api/OrderModels/delete/5
+        [HttpGet("delete/{id:int}")]
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
             var orderModel = await _context.OrderModel
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (orderModel == null)
-            {
-                return NotFound();
-            }
+            if (orderModel == null) return NotFound();
 
-            return View(orderModel);
+            return Ok(orderModel);
         }
 
-        // POST: OrderModels/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        // POST: api/OrderModels/delete/5
+        [HttpPost("delete/{id:int}")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var orderModel = await _context.OrderModel.FindAsync(id);
             if (orderModel != null)
             {
                 _context.OrderModel.Remove(orderModel);
+                await _context.SaveChangesAsync();
             }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return NoContent();
         }
 
         private bool OrderModelExists(int id)

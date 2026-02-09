@@ -1,0 +1,250 @@
+{
+  "info": {
+    "name": "OrderModels API - Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0.0"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://localhost:44392"
+    },
+    {
+      "key": "testId",
+      "value": "1"
+    }
+  ],
+  "item": [
+    {
+      "name": "GET - List all (GetOrders)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/OrderModels",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "OrderModels"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('response is success (<400)', function () {",
+              "    pm.expect(pm.response.code).to.be.below(400);",
+              "});",
+              "pm.test('response is JSON', function () {",
+              "    pm.response.to.be.json;",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GET - Index (view/list) - /index",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/OrderModels/index",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "OrderModels", "index"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('response is success (<400)', function () { pm.expect(pm.response.code).to.be.below(400); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GET - Details by id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/OrderModels/details/{{testId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "OrderModels", "details", "{{testId}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('response is success (<400)', function () { pm.expect(pm.response.code).to.be.below(400); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GET - Create (form stub)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/OrderModels/create",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "OrderModels", "create"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('response is success (<400)', function () { pm.expect(pm.response.code).to.be.below(400); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "POST - Create order",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"Id\": 0,\n  \"Cliente\": \"Postman Test\",\n  \"Produto\": \"Caneta\",\n  \"Valor\": 12.5,\n  \"Status\": 1,\n  \"Data_Criacao\": \"2026-02-09\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/OrderModels/create",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "OrderModels", "create"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('response status is success (<400)', function () { pm.expect(pm.response.code).to.be.below(400); });",
+              "",
+              "try {",
+              "  var json = pm.response.json();",
+              "  if (json && json.id) {",
+              "    pm.environment.set('testId', json.id.toString());",
+              "  }",
+              "} catch (e) { /* response not json or empty */ }"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GET - Edit (get by id)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/OrderModels/edit/{{testId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "OrderModels", "edit", "{{testId}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('response is success (<400)', function () { pm.expect(pm.response.code).to.be.below(400); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "POST - Edit order",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"Id\": {{testId}},\n  \"Cliente\": \"Postman Edited\",\n  \"Produto\": \"Lapis\",\n  \"Valor\": 15.0,\n  \"Status\": 2,\n  \"Data_Criacao\": \"2026-02-09\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/OrderModels/edit/{{testId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "OrderModels", "edit", "{{testId}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('response status is success (<400)', function () { pm.expect(pm.response.code).to.be.below(400); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GET - Delete (confirm view/info)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/OrderModels/delete/{{testId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "OrderModels", "delete", "{{testId}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('response is success (<400)', function () { pm.expect(pm.response.code).to.be.below(400); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "POST - DeleteConfirmed",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/OrderModels/delete/{{testId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "OrderModels", "delete", "{{testId}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('response status is success (<400)', function () { pm.expect(pm.response.code).to.be.below(400); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    }
+  ]
+}

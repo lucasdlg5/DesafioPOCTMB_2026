@@ -6,8 +6,13 @@ using Microsoft.Extensions.DependencyInjection;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString("OrderContext") 
+    ?? throw new InvalidOperationException("Connection string 'OrderContext' not found.");
+
+// Registra o DbContext uma única vez
 builder.Services.AddDbContext<OrderContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("OrderContext") ?? throw new InvalidOperationException("Connection string 'OrderContext' not found.")));
+    options.UseNpgsql(connectionString));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -17,24 +22,18 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:3000",
-                                              "https://localhost:44392");
+                          policy.WithOrigins("http://localhost:3000")
+                                .AllowAnyMethod()    // Permite POST, PUT, DELETE, OPTIONS etc.
+                                .AllowAnyHeader();   // Permite headers de Content-Type, Authorization, etc.
+                                // .AllowCredentials(); // habilite se precisar enviar cookies/credenciais
                       });
 });
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-
-
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddScoped<OrderContext>();
-
-var connectionString = builder.Configuration.GetConnectionString("OrderContext");
-
-builder.Services.AddDbContext<OrderContext>(options => options.UseNpgsql(connectionString));
 
 var app = builder.Build();
 
@@ -42,18 +41,13 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    //app.UseSwagger();
-    app.UseSwaggerUI(); 
+    app.UseSwaggerUI();
 }
 
-
-//app.MapGet("/test", () => "Hello World!");
-
-//app.OrdersRoutes();
 app.UseHttpsRedirection();
-app.MapSwagger().RequireAuthorization();
-
-app.UseCors(MyAllowSpecificOrigins);
+app.UseRouting();
+// Aplicar a política de CORS antes dos controllers
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 

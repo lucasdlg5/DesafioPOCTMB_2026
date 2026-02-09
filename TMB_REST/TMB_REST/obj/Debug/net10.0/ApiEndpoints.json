@@ -11,35 +11,9 @@
   },
   {
     "ContainingType": "TMB_REST.Controllers.OrderModelsController",
-    "Method": "Index",
-    "RelativePath": "api/OrderModels",
-    "HttpMethod": "",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TMB_REST.Controllers.OrderModelsController",
-    "Method": "Details",
-    "RelativePath": "api/OrderModels",
-    "HttpMethod": "",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TMB_REST.Controllers.OrderModelsController",
     "Method": "Create",
-    "RelativePath": "api/OrderModels",
-    "HttpMethod": "",
+    "RelativePath": "api/OrderModels/create",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -48,102 +22,15 @@
   {
     "ContainingType": "TMB_REST.Controllers.OrderModelsController",
     "Method": "Create",
-    "RelativePath": "api/OrderModels",
+    "RelativePath": "api/OrderModels/create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Cliente",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Produto",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Valor",
-        "Type": "System.Double",
-        "IsRequired": false
-      },
-      {
-        "Name": "Status",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Data_Criacao",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TMB_REST.Controllers.OrderModelsController",
-    "Method": "Edit",
-    "RelativePath": "api/OrderModels",
-    "HttpMethod": "",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TMB_REST.Controllers.OrderModelsController",
-    "Method": "Edit",
-    "RelativePath": "api/OrderModels",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Cliente",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Produto",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Valor",
-        "Type": "System.Double",
-        "IsRequired": false
-      },
-      {
-        "Name": "Status",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Data_Criacao",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "dto",
+        "Type": "TMB_REST.Models.OrderModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -151,15 +38,15 @@
   {
     "ContainingType": "TMB_REST.Controllers.OrderModelsController",
     "Method": "Delete",
-    "RelativePath": "api/OrderModels",
-    "HttpMethod": "",
+    "RelativePath": "api/OrderModels/delete/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -167,7 +54,7 @@
   {
     "ContainingType": "TMB_REST.Controllers.OrderModelsController",
     "Method": "DeleteConfirmed",
-    "RelativePath": "api/OrderModels",
+    "RelativePath": "api/OrderModels/delete/{id}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -175,9 +62,72 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TMB_REST.Controllers.OrderModelsController",
+    "Method": "Details",
+    "RelativePath": "api/OrderModels/details/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TMB_REST.Controllers.OrderModelsController",
+    "Method": "Edit",
+    "RelativePath": "api/OrderModels/edit/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TMB_REST.Controllers.OrderModelsController",
+    "Method": "Edit",
+    "RelativePath": "api/OrderModels/edit/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "TMB_REST.Models.OrderModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TMB_REST.Controllers.OrderModelsController",
+    "Method": "Index",
+    "RelativePath": "api/OrderModels/index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

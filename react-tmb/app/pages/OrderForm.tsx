@@ -13,12 +13,59 @@ export function OrderForm({ onSubmit }: OrderFormProps) {
   const [total, setTotal] = useState(0);
   const [status, setStatus] = useState(0);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit =  (e: React.FormEvent) => {
     e.preventDefault();
+    
     
     if (!cliente || !produto || quantidade <= 0 || total <= 0) {
       alert('Por favor, preencha todos os campos corretamente');
       return;
+    }
+
+    const postData = {
+      cliente: cliente,
+      produto: produto,
+      valor: total,
+      status: status,
+      data_Criacao: new Date().toISOString()
+    };
+
+    try {
+
+
+      fetch('https://localhost:44392/api/OrderModels', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          cliente: 'João',
+          produto: 'Caneta',
+          valor: 9.9,
+          status: 1,
+          data_Criacao: '2026-02-09'
+        })
+      })
+      .then(r => r.json())
+      .then(console.log)
+      .catch(console.error);
+
+
+      fetch('https://localhost:44392/api/orderModels', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(postData),
+      })
+      .then(r => r.json())
+      .then(console.log)
+      .catch(console.error);
+    
+    // if (!response.ok) {
+    //   throw new Error('Failed to create order')
+    //   };
+    } 
+    catch (error) {
+      console.error('Error creating order:', error);
     }
 
     onSubmit({
