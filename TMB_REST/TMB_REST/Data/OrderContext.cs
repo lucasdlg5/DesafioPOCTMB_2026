@@ -11,9 +11,16 @@ namespace TMB_REST.Data
         
         public DbSet<OrderModel> Orders { get; set; }
 
+
+        public OrderContext(DbContextOptions dbContextOptions) : base(dbContextOptions) 
+        { 
+        
+        }
+
+        public DbSet<OrderModel> DBOrder {  get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=order.sqlite");
+            optionsBuilder.UseSqlite("Data Source=order.db");
             base.OnConfiguring(optionsBuilder);
         }
     }

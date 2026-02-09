@@ -100,45 +100,6 @@
           }
         }
       }
-    },
-    "/WeatherForecast": {
-      "get": {
-        "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "GetWeatherForecast",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
@@ -148,6 +109,8 @@
           "id",
           "cliente",
           "produto",
+          "valor",
+          "status",
           "data_Criacao"
         ],
         "type": "object",
@@ -161,21 +124,14 @@
             "format": "int32"
           },
           "cliente": {
-            "type": [
-              "null",
-              "string"
-            ]
+            "type": "string"
           },
           "produto": {
-            "type": [
-              "null",
-              "string"
-            ]
+            "type": "string"
           },
           "valor": {
             "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?(?:[eE][+-]?\\d+)?$",
             "type": [
-              "null",
               "number",
               "string"
             ],
@@ -184,48 +140,13 @@
           "status": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [
-              "null",
               "integer",
               "string"
             ],
             "format": "int32"
           },
           "data_Criacao": {
-            "type": [
-              "null",
-              "string"
-            ]
-          }
-        }
-      },
-      "WeatherForecast": {
-        "type": "object",
-        "properties": {
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "temperatureC": {
-            "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "integer",
-              "string"
-            ],
-            "format": "int32"
-          },
-          "temperatureF": {
-            "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "integer",
-              "string"
-            ],
-            "format": "int32"
-          },
-          "summary": {
-            "type": [
-              "null",
-              "string"
-            ]
+            "type": "string"
           }
         }
       }
@@ -234,9 +155,6 @@
   "tags": [
     {
       "name": "TMB_REST"
-    },
-    {
-      "name": "WeatherForecast"
     }
   ]
 }

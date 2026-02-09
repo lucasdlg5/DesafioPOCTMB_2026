@@ -1,9 +1,13 @@
 using System.Web.Http;
 using TMB_REST;
 using TMB_REST.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<TMB_RESTContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("TMB_RESTContext") ?? throw new InvalidOperationException("Connection string 'TMB_RESTContext' not found.")));
 
 
 builder.Services.AddCors(options =>

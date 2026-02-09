@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TMB_REST")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0026f9154e5b5958f9afc7efa1dde7519de110d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65db153efc95fd043ca1e27944fb51de3dccfc8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TMB_REST")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TMB_REST")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

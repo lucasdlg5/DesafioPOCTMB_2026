@@ -61,8 +61,8 @@ namespace TMB_REST
                     newId,
                     newOrder.Cliente,
                     newOrder.Produto,
-                    newOrder.Valor ?? 0.0,
-                    newOrder.Status ?? 0,
+                    newOrder.Valor,
+                    newOrder.Status,
                     newOrder.Data_Criacao
                 );
                 massaDeDados.Add(createdOrder);
