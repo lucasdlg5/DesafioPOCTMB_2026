@@ -34,7 +34,7 @@ import React, { useEffect } from 'react';
 
 
 export interface Order {
-  id: string;
+  id: number;
   cliente: string;
   produto: string;
   valor: number;
@@ -99,24 +99,24 @@ function App() {
   const handleCreateOrder = (orderData: Omit<Order, 'id' | 'createdAt'>) => {
     const newOrder: Order = {
       ...orderData,
-      id: `ORD-${String(orders.length + 1).padStart(3, '0')}`,
+      id: orders.length + 1,
       createdAt: new Date(),
     };
     setOrders([newOrder, ...orders]);
   };
 
-  const handleUpdateStatus = (orderId: string, newStatus: Order['status']) => {
+  const handleUpdateStatus = (orderId: number, newStatus: Order['status']) => {
     setOrders(orders.map(order => 
       order.id === orderId ? { ...order, status: newStatus } : order
     ));
   };
 
   const filteredOrders = orders.filter(order => 
-    order.id ||
+    order.id.toString().includes(searchTerm) ||
     order.cliente.toLowerCase().includes(searchTerm.toLowerCase()) ||
     order.produto.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    statusStrings[order.status].includes(searchTerm.toLowerCase())
-  );
+    statusStrings[order.status].toLowerCase().includes(searchTerm.toLowerCase())
+);
 
   return (
     <div className="min-h-screen bg-gray-50">

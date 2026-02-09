@@ -12,9 +12,9 @@ namespace TMB_REST
             // Sua massa de dados pré-definida
             var massaDeDados = new List<OrderModel>
             {
-                new OrderModel(1, "Asminn", "Teclado Mecânico", 250.00, 1, "Hoje"),
-                new OrderModel(2, "Beatriz Silva", "Monitor 24pol", 890.50, 2, "Ontem"),
-                new OrderModel(3, "Carlos Oliveira", "Mouse Gamer", 120.00, 1, "05/02/2026"),
+                new OrderModel(1, "Asminn", "Teclado Mecânico", 250.00, 1, "2026-05-05"),
+                new OrderModel(2, "Beatriz Silva", "Monitor 24pol", 890.50, 2, "2026-05-05"),
+                new OrderModel(3, "Carlos Oliveira", "Mouse Gamer", 120.00, 1, "2026-05-02"),
                 new OrderModel(4, "Asminn", "Teclado Mecânico", 250.00, 1, "2026-02-01"),
                 new OrderModel(5, "Beatriz Silva", "Monitor 24pol", 890.50, 2, "2026-02-02"),
                 new OrderModel(6, "Carlos Oliveira", "Mouse Gamer", 120.00, 1, "2026-02-03"),

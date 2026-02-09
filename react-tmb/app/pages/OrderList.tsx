@@ -50,7 +50,7 @@ export function OrderList({ orders, onUpdateStatus }: OrderListProps) {
       
       {orders.map((order) => {
         const StatusIcon = Clock;
-        
+        order.createdAt = new Date('2026-12-01');
         return (
           <div
             key={order.id}
@@ -78,7 +78,7 @@ export function OrderList({ orders, onUpdateStatus }: OrderListProps) {
                     <span className="text-gray-500">Produto:</span> {order.produto}
                   </p>
                   <p>
-                    <span className="text-gray-500">Quantidade:</span> {order.valor}
+                    <span className="text-gray-500">Data Criacao:</span> {order.createdAt.toLocaleDateString('pt-BR')}
                   </p>
                   <p>
                     <span className="text-gray-500">Total:</span> R$ {order.valor.toFixed(2)}

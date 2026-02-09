@@ -11,6 +11,7 @@ export function OrderForm({ onSubmit }: OrderFormProps) {
   const [produto, setProduct] = useState('');
   const [quantidade, setQuantity] = useState(1);
   const [total, setTotal] = useState(0);
+  const [status, setStatus] = useState(0);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,9 +24,9 @@ export function OrderForm({ onSubmit }: OrderFormProps) {
     onSubmit({
       cliente: cliente,
       produto: produto,
-      quantidade: quantidade,
-      total,
-      status: 0,
+      // quantidade: quantidade,
+      valor: total,
+      status: status,
     });
 
     // Reset form
@@ -70,7 +71,7 @@ export function OrderForm({ onSubmit }: OrderFormProps) {
           />
         </div>
 
-        <div>
+        {/* <div>
           <label htmlFor="quantity" className="block text-sm mb-1 text-gray-700">
             Quantidade
           </label>
@@ -83,11 +84,11 @@ export function OrderForm({ onSubmit }: OrderFormProps) {
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
-        </div>
+        </div> */}
 
         <div>
           <label htmlFor="total" className="block text-sm mb-1 text-gray-700">
-            Valor Total (R$)
+            Valor (R$)
           </label>
           <input
             type="number"
