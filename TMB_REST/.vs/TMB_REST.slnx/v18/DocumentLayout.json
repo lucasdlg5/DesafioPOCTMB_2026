@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\controllers\\ordermodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\controllers\\ordermodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\views\\ordermodels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\views\\ordermodels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OrderModel.cs",
-              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Models\\OrderModel.cs",
-              "RelativeDocumentMoniker": "TMB_REST\\Models\\OrderModel.cs",
-              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Models\\OrderModel.cs",
-              "RelativeToolTip": "TMB_REST\\Models\\OrderModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T23:35:07.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Program.cs",
-              "RelativeDocumentMoniker": "TMB_REST\\Program.cs",
-              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Program.cs",
-              "RelativeToolTip": "TMB_REST\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T20:46:14.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderModelsController.cs",
-              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Controllers\\OrderModelsController.cs",
-              "RelativeDocumentMoniker": "TMB_REST\\Controllers\\OrderModelsController.cs",
-              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Controllers\\OrderModelsController.cs",
-              "RelativeToolTip": "TMB_REST\\Controllers\\OrderModelsController.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAswCQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T20:02:18.56Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Views\\OrderModels\\Index.cshtml",
+              "RelativeDocumentMoniker": "TMB_REST\\Views\\OrderModels\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Views\\OrderModels\\Index.cshtml",
+              "RelativeToolTip": "TMB_REST\\Views\\OrderModels\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-10T02:06:53.76Z",
               "EditorCaption": ""
             }
           ]

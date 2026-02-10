@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\controllers\\ordermodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\controllers\\ordermodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\react-tmb\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-tmb\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|c:\\users\\asminn\\documents\\github\\desafiopoctmb_2026\\tmb_rest\\tmb_rest\\views\\ordermodels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADEFD9A2-8F68-467C-B623-E8FF2DACF555}|TMB_REST\\TMB_REST.csproj|solutionrelative:tmb_rest\\views\\ordermodels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderModel.cs",
-              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Models\\OrderModel.cs",
-              "RelativeDocumentMoniker": "TMB_REST\\Models\\OrderModel.cs",
-              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Models\\OrderModel.cs",
-              "RelativeToolTip": "TMB_REST\\Models\\OrderModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T23:35:07.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Program.cs",
-              "RelativeDocumentMoniker": "TMB_REST\\Program.cs",
-              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Program.cs",
-              "RelativeToolTip": "TMB_REST\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T20:46:14.751Z",
+              "Title": ".dockerignore",
+              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\.dockerignore",
+              "RelativeDocumentMoniker": ".dockerignore",
+              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\.dockerignore",
+              "RelativeToolTip": ".dockerignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-10T02:19:18.342Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OrderModelsController.cs",
-              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Controllers\\OrderModelsController.cs",
-              "RelativeDocumentMoniker": "TMB_REST\\Controllers\\OrderModelsController.cs",
-              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Controllers\\OrderModelsController.cs",
-              "RelativeToolTip": "TMB_REST\\Controllers\\OrderModelsController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAvwBYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T20:02:18.56Z",
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-02-10T02:18:56.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\react-tmb\\Dockerfile",
+              "RelativeDocumentMoniker": "react-tmb\\Dockerfile",
+              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\react-tmb\\Dockerfile",
+              "RelativeToolTip": "react-tmb\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-10T02:18:48.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Dockerfile",
+              "RelativeDocumentMoniker": "TMB_REST\\Dockerfile",
+              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Dockerfile",
+              "RelativeToolTip": "TMB_REST\\Dockerfile",
+              "ViewState": "AgIAAAwAAAAAAAAAAAApwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-10T02:18:18.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Views\\OrderModels\\Index.cshtml",
+              "RelativeDocumentMoniker": "TMB_REST\\Views\\OrderModels\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Asminn\\Documents\\GitHub\\DesafioPOCTMB_2026\\TMB_REST\\TMB_REST\\Views\\OrderModels\\Index.cshtml",
+              "RelativeToolTip": "TMB_REST\\Views\\OrderModels\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-10T02:06:53.76Z",
               "EditorCaption": ""
             }
           ]

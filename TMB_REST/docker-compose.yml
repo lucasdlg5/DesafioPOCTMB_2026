@@ -1,0 +1,49 @@
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_PASSWORD: "123456" # substitua por senha forte
+      POSTGRES_USER: "postgres"
+      POSTGRES_DB: "OrderDb"
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./TMB_REST/
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80" # host:container
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=123456;Include Error Detail=true
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./react-tmb
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  migrator:
+    image: mcr.microsoft.com/dotnet/sdk:10.0
+    depends_on:
+      - db
+    volumes:
+      - ./TMB_REST/TMB_REST:/src
+    working_dir: /src
+    # Use para aplicar migrations: docker-compose run --rm migrator
+    entrypoint: ["bash", "-c", "dotnet tool restore || true; dotnet ef database update --no-build"]
+
+volumes:
+  pgdata:

@@ -20,13 +20,22 @@ COPY . .
 WORKDIR "/src/TMB_REST"
 RUN dotnet build "./TMB_REST.csproj" -c %BUILD_CONFIGURATION% -o /app/build
 
-# Esta fase é usada para publicar o projeto de serviço a ser copiado para a fase final
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./TMB_REST.csproj" -c %BUILD_CONFIGURATION% -o /app/publish /p:UseAppHost=false
 
-# Esta fase é usada na produção ou quando executada no VS no modo normal (padrão quando não está usando a configuração de Depuração)
-FROM base AS final
+# Multi-stage build para backend .NET 10
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+WORKDIR /src
+
+# Copie csproj e restaure
+COPY ["TMB_REST.csproj", "./"]
+RUN dotnet restore "./TMB_REST.csproj"
+
+# Copie toda a app e publique
+COPY . .
+RUN dotnet publish "TMB_REST.csproj" -c Release -o /app/publish
+
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime
 WORKDIR /app
-COPY --from=publish /app/publish .
+ENV ASPNETCORE_URLS=http://+:80
+COPY --from=build /app/publish .
+EXPOSE 80
 ENTRYPOINT ["dotnet", "TMB_REST.dll"]
